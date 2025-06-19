@@ -691,6 +691,12 @@
     const SUPABASE_URL = 'https://nvpkfxgqrulfeknxygcd.supabase.co';
     const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im52cGtmeGdxcnVsZmVrbnh5Z2NkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAzNTk5MTMsImV4cCI6MjA2NTkzNTkxM30.tTvmkkLZa71sXuN7gtDq42G9mFzFgNGw25_up7MQeuM';
     const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+    
+import { createClient } from '@supabase/supabase-js'
+
+const supabaseUrl = 'https://nvpkfxgqrulfeknxygcd.supabase.co'
+const supabaseKey = process.env.SUPABASE_KEY
+const supabase = createClient(supabaseUrl, supabaseKey)
 
     // Cargar registros al abrir la app
     async function cargarRegistros() {
